@@ -6,12 +6,14 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:00:58 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/01 16:47:15 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:32:32 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include <stdlib.h>
 
 int				ft_atoi(const char *str);
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
@@ -28,5 +30,6 @@ void			*ft_memchr(const void *s, int c, unsigned int n);
 int				ft_memcmp(const void *s1, const void *s2, unsigned int n);
 char			*ft_strnstr(const char *b, const char *l, unsigned int len);
 void			*ft_calloc(unsigned int count, unsigned int size);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
