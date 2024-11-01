@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 20:50:27 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/01 16:47:38 by fboulbes         ###   ########.fr       */
+/*   Created: 2024/11/01 16:36:37 by fboulbes          #+#    #+#             */
+/*   Updated: 2024/11/01 16:43:51 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h> 
-// #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-char	*ft_strnstr(const char *b, const char *l, unsigned int len)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
+	void			*ptr;
 	unsigned int	i;
-	unsigned int	j;
 
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
 	i = 0;
-	j = 0;
-	while (b[i] != '\0' && i < len)
-	{
-		if (b[i] == l[j])
-			j++;
-		i++;
-	}
-	if (l[j] == '\0')
-		return ((char *)&b[i - j]);
+	while (i < nmemb * size)
+		((unsigned char *)ptr)[i++] = 0;
+	return (ptr);
 }
 
 /* 
 int	main(void)
 {
-	printf("%s", ft_strnstr("Hello, World!", "World", 13));
-	printf("%s", strnstr("Hello, World!", "World", 13));
+	int	*tab;
+
+	tab = ft_calloc(5, sizeof(int));
+	for (int i = 0; i < 5; i++)
+		printf("%d ", tab[i]);
+	free(tab);
 	return (0);
 }
  */
