@@ -6,12 +6,14 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:50:27 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/01 16:47:38 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:23:13 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h> 
 // #include <string.h>
+
+#include <stdlib.h>
 
 char	*ft_strnstr(const char *b, const char *l, unsigned int len)
 {
@@ -28,6 +30,7 @@ char	*ft_strnstr(const char *b, const char *l, unsigned int len)
 	}
 	if (l[j] == '\0')
 		return ((char *)&b[i - j]);
+	return (NULL);
 }
 
 /* 
