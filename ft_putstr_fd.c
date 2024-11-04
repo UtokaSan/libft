@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 19:00:01 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/04 15:17:23 by fboulbes         ###   ########.fr       */
+/*   Created: 2024/11/04 15:22:42 by fboulbes          #+#    #+#             */
+/*   Updated: 2024/11/04 15:25:58 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <unistd.h>
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (s1[i] && s2[i] && i < n)
+	while (s[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		write(fd, s[i], 1);
 		i++;
 	}
-	return (0);
 }
