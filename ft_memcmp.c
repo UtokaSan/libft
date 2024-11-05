@@ -6,16 +6,16 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:49:27 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 20:49:52 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:52:19 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 // #include <string.h>
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

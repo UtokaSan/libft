@@ -1,43 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 18:46:43 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 14:00:13 by fboulbes         ###   ########.fr       */
+/*   Created: 2024/11/05 13:37:43 by fboulbes          #+#    #+#             */
+/*   Updated: 2024/11/05 13:38:18 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
-{
-	if (c == ' ' || (c >= '\t' && c <= '\r'))
-		return (1);
-	return (0);
-}
+#include <unistd.h>
 
-int	ft_atoi(const char *str)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-	int	sign;
-	int	res;
+	size_t	i;
 
 	i = 0;
-	sign = 1;
-	res = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (s[i] != '\0')
 	{
-		if (str[i] == '-')
-			sign = -1;
+		write(fd, s[i], 1);
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + (str[i] - '0');
-		i++;
-	}
-	return (res * sign);
+	write(fd, "\n", 1);
 }

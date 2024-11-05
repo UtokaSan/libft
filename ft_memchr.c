@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:47:38 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/01 18:23:01 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:52:40 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 #include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int		i;
+	size_t				i;
 	const unsigned char	*str;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:46:04 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/04 14:01:23 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:43:36 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,14 @@ void	ft_cut_string(char **result, char *str, int *pos)
 	result[i + 1] = NULL;
 }
 
-char	**ft_split(char *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		*pos;
 	int		count;
 	char	**result;
 
+	if (!s)
+		return (NULL);
 	count = 0;
 	pos = ft_search_charset(c, s);
 	if (pos == NULL)

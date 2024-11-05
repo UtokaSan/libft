@@ -6,15 +6,15 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:55:33 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 19:03:27 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:49:44 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memset(void *pointer, int value, unsigned int count)
+void	*ft_memset(void *pointer, int value, size_t count)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < count)

@@ -6,16 +6,16 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:32:16 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 14:00:37 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:52:47 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-void	*ft_memccpy(void *dest, const void *src, int ch, int n)
+void	*ft_memccpy(void *dest, const void *src, int ch, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:50:27 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/01 18:23:13 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:59:54 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 #include <stdlib.h>
 
-char	*ft_strnstr(const char *b, const char *l, unsigned int len)
+char	*ft_strnstr(const char *b, const char *l, size_t len)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

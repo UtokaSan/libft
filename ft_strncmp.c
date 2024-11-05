@@ -6,16 +6,18 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:00:01 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/04 15:17:23 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:58:25 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <stdio.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t length)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (s1[i] && s2[i] && i < n)
+	while (s1[i] && s2[i] && i < length)
 	{
 		if (s1[i] != s2[i])
 			return (s1[i] - s2[i]);
@@ -23,3 +25,10 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 	}
 	return (0);
 }
+
+/* 
+int	main(void)
+{
+	printf("%d", ft_strncmp("Hello", "Hello", 5));
+}
+ */

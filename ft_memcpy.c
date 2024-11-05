@@ -6,13 +6,15 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:15:15 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 13:32:00 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:51:34 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include <stdio.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
@@ -22,3 +24,11 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 	}
 	return (dest);
 }
+
+/* 
+int	main(void)
+{
+	printf("%s\n", ft_memcpy("Hello, World!", "Hello, World!", 5));
+	return (0);
+}
+ */

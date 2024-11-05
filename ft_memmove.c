@@ -6,15 +6,15 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:32:54 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 20:40:30 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:51:52 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (dest < src)
 	{

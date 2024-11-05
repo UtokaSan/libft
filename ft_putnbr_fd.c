@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 18:46:43 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 14:00:13 by fboulbes         ###   ########.fr       */
+/*   Created: 2024/11/05 13:38:40 by fboulbes          #+#    #+#             */
+/*   Updated: 2024/11/05 13:39:38 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
-{
-	if (c == ' ' || (c >= '\t' && c <= '\r'))
-		return (1);
-	return (0);
-}
+#include <unistd.h>
 
-int	ft_atoi(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
-	int	sign;
-	int	res;
-
-	i = 0;
-	sign = 1;
-	res = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (n == -2147483648)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	if (n < 0)
 	{
-		res = res * 10 + (str[i] - '0');
-		i++;
+		write(fd, "-", 1);
+		n = -n;
 	}
-	return (res * sign);
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	write(fd, (n % 10 + '0'), 1);
 }

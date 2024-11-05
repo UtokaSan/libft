@@ -6,15 +6,15 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 19:04:47 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 19:07:30 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:49:57 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_bzero(void *pointer, unsigned int count)
+void	ft_bzero(void *pointer, size_t count)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < count)

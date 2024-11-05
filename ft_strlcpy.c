@@ -6,13 +6,15 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:50:37 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/30 18:58:25 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:53:21 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+#include <stdio.h>
+
+unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] && i < size)
@@ -23,3 +25,10 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	dest[i] = '\0';
 	return (i);
 }
+
+/* 
+int	main(void)
+{
+	printf("%d", ft_strlcpy("Hello, World!", "Hello, World!", 13));
+}
+ */

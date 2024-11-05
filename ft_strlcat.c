@@ -6,14 +6,16 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:58:50 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/30 18:59:29 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:54:09 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
+#include <stdio.h>
+
+unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
