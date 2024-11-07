@@ -6,22 +6,13 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:46:04 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:43:36 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:47:30 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 int	*ft_search_charset(char c, char *str)
 {
@@ -40,24 +31,6 @@ int	*ft_search_charset(char c, char *str)
 	}
 	pos[count] = -1;
 	return (pos);
-}
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (i < n && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
 }
 
 void	ft_cut_string(char **result, char *str, int *pos)

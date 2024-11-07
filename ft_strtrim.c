@@ -6,38 +6,13 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:10:04 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/04 15:00:54 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:04:00 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-
-size_t	ft_strlen(char const *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strchr(const char *string, int searchedChar)
-{
-	int	i;
-
-	i = 0;
-	while (string[i] != '\0')
-	{
-		if (string[i] == (char)searchedChar)
-			return ((char *)string + i);
-		i++;
-	}
-	if ((char)searchedChar == '\0')
-		return ((char *)string + i);
-	return (NULL);
-}
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -65,11 +40,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_str[i] = '\0';
 	return (new_str);
 }
-
-/*
+/* 
 int	main(void)
 {
 	printf("%s", ft_strtrim("Hello, world!", "Hd!"));
 	return (0);
 }
-*/
+ */

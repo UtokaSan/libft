@@ -6,22 +6,13 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:03:30 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/04 15:14:48 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:53:06 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 /**
 char	ft_toupper(unsigned int i, char c)

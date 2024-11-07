@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:58:50 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:54:09 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:50:00 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	while (dest[i] && i < size)
+	while (dest[i] != '\0' && i < size)
 		i++;
-	while (src[j] && (i + j) < size - 1)
+	while (src[j] != '\0' && (i + j) < size - 1)
 	{
 		dest[i + j] = src[j];
 		j++;
