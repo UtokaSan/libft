@@ -6,12 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:49:27 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:52:19 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:30:24 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-// #include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

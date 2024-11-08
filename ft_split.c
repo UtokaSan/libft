@@ -6,15 +6,27 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:46:04 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/07 15:47:30 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:31:19 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
-int	*ft_search_charset(char c, char *str)
+char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+int	*ft_search_charset(char c, char const *str)
 {
 	int	i;
 	int	*pos;
@@ -33,7 +45,7 @@ int	*ft_search_charset(char c, char *str)
 	return (pos);
 }
 
-void	ft_cut_string(char **result, char *str, int *pos)
+void	ft_cut_string(char **result, char const *str, int *pos)
 {
 	int	i;
 	int	start;

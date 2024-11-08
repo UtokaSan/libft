@@ -6,12 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 21:11:20 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/01 21:38:07 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:29:34 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_convert(char *str, int n, size_t len)
 {

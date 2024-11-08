@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:32:54 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:51:52 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:30:40 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

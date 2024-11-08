@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:00:58 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/07 16:12:31 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:37:15 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,26 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <string.h>
 
 size_t			ft_strlen(const char *str);
 int				ft_atoi(const char *str);
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
-int				ft_strncmp(const char *s1, const char *s2, unsigned int n);
-void			*ft_memccpy(void *dest, const void *src, int ch, int n);
-void			*ft_memcpy(void *dest, const void *src, unsigned int n);
+unsigned int	ft_strlcpy(char *dest, const char *src, size_t size);
+unsigned int	ft_strlcat(char *dest, const char *src, size_t size);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
+void			*ft_memccpy(void *dest, const void *src, int ch, size_t n);
+void			*ft_memcpy(void *dest, const void *src, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
-void			ft_bzero(void *pointer, unsigned int count);
-void			*ft_memset(void *pointer, int value, unsigned int count);
+void			ft_bzero(void *pointer, size_t count);
+void			*ft_memset(void *pointer, int value, size_t count);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *src);
-void			*ft_memchr(const void *s, int c, unsigned int n);
-int				ft_memcmp(const void *s1, const void *s2, unsigned int n);
-char			*ft_strnstr(const char *b, const char *l, unsigned int len);
-void			*ft_calloc(unsigned int count, unsigned int size);
+void			*ft_memchr(const void *s, int c, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
+char			*ft_strnstr(const char *b, const char *l, size_t len);
+void			*ft_calloc(size_t count, size_t size);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);

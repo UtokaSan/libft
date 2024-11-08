@@ -6,14 +6,14 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:50:27 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:59:54 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:32:38 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h> 
 // #include <string.h>
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *b, const char *l, size_t len)
 {

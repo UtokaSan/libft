@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:03:20 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/07 15:57:45 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:31:25 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *string, int searchedChar)
 {

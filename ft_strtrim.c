@@ -6,12 +6,10 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:10:04 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/07 16:04:00 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:32:56 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

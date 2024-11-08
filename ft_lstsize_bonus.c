@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:36:54 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 20:38:12 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:27:03 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:50:37 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:53:21 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:32:10 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
 {

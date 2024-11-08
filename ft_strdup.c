@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:56:57 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 21:00:54 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:31:39 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {

@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:58:50 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/07 15:50:00 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:32:03 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 {

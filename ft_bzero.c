@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 19:04:47 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:49:57 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:29:05 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *pointer, size_t count)
 {

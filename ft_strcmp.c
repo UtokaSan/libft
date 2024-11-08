@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 19:08:06 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 19:09:36 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:31:33 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

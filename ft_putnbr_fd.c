@@ -6,14 +6,17 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:38:40 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:39:38 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:31:03 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	int	res;
+
+	res = 0;
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
@@ -28,5 +31,6 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putnbr_fd(n / 10, fd);
 	}
-	write(fd, (n % 10 + '0'), 1);
+	res = n % 10 + '0';
+	write(fd, &res, 1);
 }

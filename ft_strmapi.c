@@ -6,12 +6,10 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:03:30 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/07 15:53:06 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:32:24 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 /**

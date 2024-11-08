@@ -6,12 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:43:07 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/10/31 20:47:03 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:32:48 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

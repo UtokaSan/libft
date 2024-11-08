@@ -6,12 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:32:16 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 13:52:47 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:30:02 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int ch, size_t n)
 {

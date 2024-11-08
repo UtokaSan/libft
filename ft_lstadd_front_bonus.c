@@ -6,11 +6,11 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 19:50:35 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/05 20:35:46 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:26:25 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

@@ -1,20 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 20:39:00 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/08 19:34:47 by fboulbes         ###   ########.fr       */
+/*   Created: 2024/11/08 19:17:16 by fboulbes          #+#    #+#             */
+/*   Updated: 2024/11/08 19:31:49 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+/* 
+void	ft_putchar(unsigned int i, char *c)
 {
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	(void)i;
+	write(1, c, 1);
 }
+ */
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
+}
+/* 
+int	main(void)
+{
+	ft_striteri("Hello, World!", ft_putchar);
+}
+ */
