@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 21:11:20 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/08 19:29:34 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:43:06 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,10 @@ char	*ft_itoa(int n)
 	ft_convert(str, n, len);
 	return (str);
 }
-
+/* 
 int	main(void)
 {
 	printf("%s", ft_itoa(1234));
 	return (0);
 }
+*/

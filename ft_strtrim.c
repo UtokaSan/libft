@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:10:04 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/08 19:32:56 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/09 17:24:59 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1) - 1;
 	while (end > start && ft_strchr(set, s1[end]))
 		end--;
-	new_str = malloc(sizeof(char) * (end - start + 1));
+	if (start > end)
+		return (ft_calloc(1, sizeof(char)));
+	new_str = ft_calloc(end - start + 1, sizeof(char));
 	if (!new_str)
 		return (NULL);
 	while (start < end)
@@ -35,13 +37,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 		start++;
 	}
-	new_str[i] = '\0';
 	return (new_str);
 }
 /* 
 int	main(void)
 {
-	printf("%s", ft_strtrim("Hello, world!", "Hd!"));
+	printf("%s\n", ft_strtrim("abcd", ""));
+	printf("%s\n", ft_strtrim("abcde", ""));
+	printf("%s\n", ft_strtrim(" . abcd", " "));
+	printf("%s\n", ft_strtrim("ab cd  f    ", " "));
+	printf("%s\n", ft_strtrim("xxxzst with x and z and x .  zx  xx z", "z x"));
+	printf("%s\n", ft_strtrim("   abxfg  ", "x"));
+	printf("%s\n", ft_strtrim(".teste, bla ,.,.", ",."));
 	return (0);
 }
  */

@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:40:24 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/08 19:31:57 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/09 17:03:40 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		length_strs;
 
 	if (!s1 || !s2)
-	{
-		new_str = malloc(1);
-		new_str[0] = '\0';
-		return (new_str);
-	}
+		return (NULL);
 	length_strs = ft_strlen(s1) + ft_strlen(s2);
-	new_str = malloc(length_strs + 1);
-	new_str[0] = '\0';
+	new_str = ft_calloc(length_strs + 1, sizeof(char));
+	if (!new_str)
+		return (NULL);
 	ft_strcat(new_str, s1);
 	ft_strcat(new_str, s2);
 	return (new_str);
