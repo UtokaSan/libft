@@ -6,26 +6,43 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:58:50 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/08 19:32:03 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/10 00:38:49 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	dst_len;
 	size_t	i;
-	size_t	j;
 
+	if (size == 0)
+		return (ft_strlen(src));
+	dst_len = 0;
+	while (dst_len < size && dst[dst_len] != '\0')
+		dst_len++;
+	if (dst_len == size)
+		return (size + ft_strlen(src));
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0' && i < size)
-		i++;
-	while (src[j] != '\0' && (i + j) < size - 1)
+	while (src[i] != '\0' && dst_len + i < size - 1)
 	{
-		dest[i + j] = src[j];
-		j++;
+		dst[dst_len + i] = src[i];
+		i++;
 	}
-	dest[i + j] = '\0';
-	return (i + j);
+	dst[dst_len + i] = '\0';
+	return (dst_len + ft_strlen(src));
 }
+
+/* 
+int	main(void)
+{
+	char	dest[14];
+
+	dest[14] = 'a';
+	ft_strlcat(dest, "lorem ipsum dolor sit amet", 15);
+	write(1, "\n", 1);
+	write(1, dest, 15);
+	return (0);
+}
+ */

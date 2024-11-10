@@ -6,7 +6,7 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:43:07 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/08 19:32:48 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/10 00:54:05 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,23 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	unsigned int	i;
-	unsigned int	j;
+	int				occurrence;
 
 	i = 0;
-	j = 0;
+	occurrence = -1;
 	while (s[i] != '\0')
 	{
 		if (s[i] == (char)c)
-			j = i;
+			occurrence = i;
 		i++;
 	}
 	if (s[i] == (char)c)
 		return ((char *)&s[i]);
-	return ((char *)&s[j]);
+	if (occurrence != -1)
+		return ((char *)&s[occurrence]);
+	return (NULL);
 }
+
 /* 
 int	main(void)
 {
