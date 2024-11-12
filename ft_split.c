@@ -6,95 +6,83 @@
 /*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:46:04 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/08 19:31:19 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:00:46 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+static int	ft_count_words(const char *s, char c)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (src[i] && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-int	*ft_search_charset(char c, char const *str)
-{
-	int	i;
-	int	*pos;
 	int	count;
+	int	in_word;
+	int	i;
 
-	i = 0;
 	count = 0;
-	pos = malloc((ft_strlen(str) + 1) * sizeof(int));
-	while (str[i] != '\0')
+	in_word = 0;
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (str[i] == c)
-			pos[count++] = i;
+		if (s[i] != c && in_word == 0)
+		{
+			in_word = 1;
+			count++;
+		}
+		else if (s[i] == c)
+			in_word = 0;
 		i++;
 	}
-	pos[count] = -1;
-	return (pos);
+	return (count);
 }
 
-void	ft_cut_string(char **result, char const *str, int *pos)
+static char	*ft_get_next_word(const char **s, char c)
 {
-	int	i;
-	int	start;
-	int	len;
+	const char	*start;
+	char		*word;
+	int			len;
+	int			i;
 
 	i = 0;
-	start = 0;
-	while (pos[i] != -1)
-	{
-		len = pos[i] - start;
-		result[i] = malloc((len + 1) * sizeof(char));
-		if (result[i] == NULL)
-			return ;
-		ft_strncpy(result[i], str + start, len);
-		result[i][len] = '\0';
-		start = pos[i] + 1;
+	while (**s == c)
+		(*s)++;
+	start = *s;
+	while ((*s)[i] != '\0' && (*s)[i] != c)
 		i++;
-	}
-	len = ft_strlen(str + start);
-	result[i] = malloc((len + 1) * sizeof(char));
-	if (result[i] == NULL)
-		return ;
-	ft_strncpy(result[i], str + start, len);
-	result[i][len] = '\0';
-	result[i + 1] = NULL;
+	len = i;
+	word = malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (NULL);
+	ft_strlcpy(word, start, len + 1);
+	*s += len;
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		*pos;
-	int		count;
 	char	**result;
+	int		word_count;
+	int		i;
 
 	if (!s)
 		return (NULL);
-	count = 0;
-	pos = ft_search_charset(c, s);
-	if (pos == NULL)
+	word_count = ft_count_words(s, c);
+	result = malloc(sizeof(char *) * (word_count + 1));
+	if (!result)
 		return (NULL);
-	while (pos[count] != -1)
-		count++;
-	result = malloc((count + 1) * sizeof(char *));
-	if (result == NULL)
+	i = 0;
+	while (i < word_count)
 	{
-		free(pos);
-		return (NULL);
+		result[i] = ft_get_next_word(&s, c);
+		if (!result[i])
+		{
+			while (i > 0)
+				free(result[--i]);
+			free(result);
+			return (NULL);
+		}
+		i++;
 	}
-	ft_cut_string(result, s, pos);
-	free(pos);
+	result[i] = NULL;
 	return (result);
 }
 

@@ -3,61 +3,61 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: florianb <florianb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 21:11:20 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/09 15:43:06 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/12 00:41:24 by florianb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_convert(char *str, int n, size_t len)
+int	ft_get_size(int n)
 {
-	size_t	nb;
+	int	digit;
 
-	nb = n;
-	if (n == 0)
-		str[0] = '0';
-	if (n < 0)
+	digit = 0;
+	while (n != 0)
 	{
-		str[0] = '-';
-		nb = -nb;
+		n /= 10;
+		digit++;
 	}
-	str[len] = '\0';
-	while (nb > 0)
-	{
-		len--;
-		str[len] = nb % 10 + '0';
-		nb /= 10;
-	}
+	return (digit);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	size_t	len;
-	int		nb;
+	int		sign;	
+	int		len;
+	char	*res;
 
-	nb = n;
-	len = 0;
-	if (n <= 0)
-		len = 1;
-	while (nb > 0)
-	{
-		len++;
-		nb /= 10;
-	}
-	str = malloc(sizeof(char) * (len + 1));
-	if (!str)
+	if (n == 0)
+		return (ft_strdup("0"));
+	sign = n < 0;
+	len = ft_get_size(n) + sign;
+	res = ft_calloc(len + 1, sizeof(char));
+	if (!res)
 		return (NULL);
-	ft_convert(str, n, len);
-	return (str);
+	if (sign)
+	{
+		res[0] = '-';
+		len--;
+		res[len] = -(n % 10) + '0';
+		n = -(n / 10);
+	}
+	while (n != 0)
+	{
+		len--;
+		res[len] = n % 10 + '0';
+		n /= 10;
+	}
+	return (res);
 }
-/* 
+
+/*
 int	main(void)
 {
-	printf("%s", ft_itoa(1234));
+	printf("%s", ft_itoa(0));
 	return (0);
 }
 */
