@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: florianb <florianb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:32:54 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/09 16:27:57 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/18 06:13:02 by florianb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!dest && !src)
+		return (NULL);
 	if (dest < src)
 	{
 		i = 0;

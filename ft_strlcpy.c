@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: florianb <florianb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:50:37 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/10 00:37:50 by fboulbes         ###   ########.fr       */
+/*   Updated: 2024/11/16 22:46:19 by florianb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	i;
 	size_t	src_len;
 
-	if (!src)
-		return (0);
 	src_len = 0;
 	while (src[src_len])
 		src_len++;
