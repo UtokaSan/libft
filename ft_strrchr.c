@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fboulbes <fboulbes@student.42perpignan.>	+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:43:07 by fboulbes          #+#    #+#             */
 /*   Updated: 2024/11/10 00:54:05 by fboulbes         ###   ########.fr       */

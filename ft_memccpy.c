@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fboulbes <fboulbes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fboulbes <fboulbes@student.42perpignan.>	+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:32:16 by fboulbes          #+#    #+#             */
 /*   Updated: 2024/11/08 19:30:02 by fboulbes         ###   ########.fr       */

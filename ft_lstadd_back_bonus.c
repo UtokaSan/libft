@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florianb <florianb@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fboulbes <fboulbes@student.42perpignan.>	+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:48:09 by fboulbes          #+#    #+#             */
-/*   Updated: 2024/11/12 01:31:29 by florianb         ###   ########.fr       */
+/*   Updated: 2024/11/19 12:13:32 by fboulbes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
